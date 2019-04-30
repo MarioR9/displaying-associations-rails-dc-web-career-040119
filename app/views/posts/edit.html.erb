@@ -1,6 +1,7 @@
 <h1>Edit Post</h1>
 
 <%= form_for(@post) do |f| %>
+<input name="_method" type="hidden" value="patch" />
   <div class="field">
     <%= f.label :title, 'Post Title:' %><br>
     <%= f.text_field :title %>
@@ -17,6 +18,8 @@
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit  %>
   </div>
+
+
 <% end %>
